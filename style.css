@@ -1,0 +1,53 @@
+html, body {
+	background: black;
+	color: white;
+	height: 100%; /* otherwise not the whole window is black */
+}
+
+h3 {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.5em;
+}
+
+.cell {
+	font-size: 1.5em;
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+}
+
+.flex-item {
+	align-content: center; /* for top/center/bottom */
+	justify-content: center; /* for left/right/center */
+}
+
+/* 3fr / 1fr equivalent in flexbox */
+.flex-item:first-child {
+  flex: 3;
+  text-align: center;
+}
+
+.flex-item:nth-child(2),
+.flex-item:nth-child(3) {
+  flex: 1;
+}
+
+
+.grid-container {
+	display: grid;
+	border: solid;
+}
+
+.grid-item {
+	display: grid;
+	text-align: center;
+	border: solid;
+	grid-template-columns: 1fr 1fr 1fr 1fr; /* this logic can only be used in grid not flex */
+}
+
+.cell {
+	padding: 1px 1px;
+}
